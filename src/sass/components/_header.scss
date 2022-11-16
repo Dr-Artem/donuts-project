@@ -1,0 +1,78 @@
+.header {
+	padding-top: 16px;
+	&__container {
+		align-items: center;
+	}
+	
+	&__atributes{
+		z-index: 100;
+		position: relative;
+
+		@media screen and (max-width: $pre-desctop) {
+			width: 100%;
+		}
+	}
+	&__burger-menu {
+		position: absolute;
+		display: flex;
+		cursor: pointer;
+		background-color: transparent;
+		top: 0;
+		right: 0;
+
+		@media screen and (min-width: $desctop) {
+			display: none;
+		}
+	}
+	&__close-menu {
+		position: absolute;
+		display: flex;
+		cursor: pointer;
+		background-color: transparent;
+		top: 0;
+		right: 0;		
+
+		@media screen and (min-width: $desctop) {
+			display: none;
+		}
+	}
+	&__menu-icon {
+		fill: currentColor;
+	}
+	&__navigation {
+		@media screen and (max-width: $pre-tablet) {
+			padding-top: 112px;
+		}
+		@media screen and (min-width: $pre-tablet) and (max-width: $pre-desctop) {
+			padding-top: 140px;
+		}
+	}
+}
+
+@media screen and (max-width: $pre-desctop) {
+	.header__menu {
+		z-index: 10;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		overflow-y: auto;
+		overflow-x: hidden;
+		opacity: 1;
+		transform: translateX(0%);
+		transition: transform var(--general-transition-effect), opacity var(--general-transition-effect);
+
+		&.is-hide {
+			opacity: 0;
+			transform: translateX(100%);
+			pointer-events: none;
+		}
+	}
+}
+@media screen and (min-width: $desctop) {
+	.header__menu {
+		display: flex;
+		width: 100%;
+	}
+}

@@ -1,0 +1,22 @@
+:root {
+	--main-color: #3C322D;
+	--acent-color: #F3848C;
+	--accent-white-color: #F6F7F7;
+
+	// fonts
+	--montserrat-family: "Montserrat";
+	--montserrat-font-weight-400: 400;
+	--montserrat-font-weight-500: 500;
+	--montserrat-font-weight-600: 600;
+
+	--montserrat-alternates-family: "Montserrat Alternates"
+	--montserrat-alternates-font-weight-500: 500;
+	--montserrat-alternates-font-weight-600: 600;
+}
+
+$pre-mobile: 479.98px;
+$mobile: 480px;
+$pre-tablet: 767.98px;
+$tablet: 768px;
+$pre-desctop: 1279.98px;
+$desctop: 1280px;

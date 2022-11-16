@@ -1,0 +1,60 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	color: var(--main-color);
+	margin: 0;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+}
+button {
+	color: inherit;
+	margin: 0;
+	padding: 0;
+}
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+.container {
+	max-width: 480px;
+	padding: 0 20px;
+	margin: 0 auto;
+
+	@media screen and (min-width: $tablet) {
+		padding: 0 32px;
+		max-width: 768px;
+	}
+	@media screen and (min-width: $desctop) {
+		padding: 0 16px;
+		max-width: 1280px;
+	}
+}
+
+.flex-container {
+	display: flex;
+}
+
+.hidden {
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	margin: -1px;
+}

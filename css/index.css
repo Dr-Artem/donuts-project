@@ -64,6 +64,8 @@ img {
 }
 
 .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -85,7 +87,9 @@ img {
   padding-top: 16px;
 }
 .header__container {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .header__atributes {
   z-index: 100;
@@ -98,6 +102,8 @@ img {
 }
 .header__burger-menu {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   cursor: pointer;
   background-color: transparent;
@@ -111,6 +117,8 @@ img {
 }
 .header__close-menu {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   cursor: pointer;
   background-color: transparent;
@@ -147,24 +155,39 @@ img {
     overflow-y: auto;
     overflow-x: hidden;
     opacity: 1;
-    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transition: opacity var(--general-transition-effect), -webkit-transform var(--general-transition-effect);
+    transition: opacity var(--general-transition-effect), -webkit-transform var(--general-transition-effect);
+    -o-transition: transform var(--general-transition-effect), opacity var(--general-transition-effect);
     transition: transform var(--general-transition-effect), opacity var(--general-transition-effect);
+    transition: transform var(--general-transition-effect), opacity var(--general-transition-effect), -webkit-transform var(--general-transition-effect);
   }
   .header__menu.is-hide {
     opacity: 0;
-    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
     pointer-events: none;
   }
 }
 @media screen and (min-width: 1280px) {
   .header__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
   }
 }
 .navigation__list {
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 40px;
 }
 @media screen and (min-width: 768px) {
@@ -174,7 +197,10 @@ img {
 }
 @media screen and (min-width: 1280px) {
   .navigation__list {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -192,7 +218,8 @@ img {
   background-image: url("/assets/black-fone480.png"), url("/src/images/reg-img-480.jpg"), url("/assets/white-fone480.png");
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
+  -webkit-box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
+          box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
   border-radius: 10px;
 }
 
@@ -237,10 +264,16 @@ img {
   font-size: 16px;
   line-height: 1.25;
 }
+.registration__input::-webkit-input-placeholder {
+  color: var(--accent-white-color);
+}
 .registration__input::-moz-placeholder {
   color: var(--accent-white-color);
 }
 .registration__input:-ms-input-placeholder {
+  color: var(--accent-white-color);
+}
+.registration__input::-ms-input-placeholder {
   color: var(--accent-white-color);
 }
 .registration__input::placeholder {
@@ -248,9 +281,15 @@ img {
 }
 
 .button.registration {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: var(--accent-white-color);
   background-color: var(--acent-color);
   border-radius: 25px;
@@ -271,7 +310,7 @@ img {
   border: 1px solid var(--hover-white-color);
 }
 
-@media screen and (min-device-pixel-ratio: 2) and (max-width: 768px), screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px), screen and (min-resolution: 192dpi) and (max-width: 768px), screen and (min-resolution: 2dppx) and (max-width: 768px) {
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 768px), screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px), screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 768px), screen and (min-resolution: 192dpi) and (max-width: 768px), screen and (min-resolution: 2dppx) and (max-width: 768px) {
   .registration__background {
     background-image: url("/assets/black-fone480@2x.png"), url("/src/images/reg-img-480@2x.jpg"), url("/assets/white-fone480@2x.png");
   }

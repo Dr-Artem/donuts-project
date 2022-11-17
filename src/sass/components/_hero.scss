@@ -1,6 +1,7 @@
 .hero {
 	&__image-wrapper {
 		// max-width: 480px;
+		mix-blend-mode: darken;
 		margin: 0 auto;
 		padding-top: 16px;
 		padding-bottom: 8px;
@@ -61,43 +62,39 @@
 		}
 	}
 	&__title {
-		font-family: "Montserrat Alternates";
-		font-style: normal;
-		font-weight: 600;
-		color: #3c322d;
+		font-family: var(--montserrat-alternates-family);
+		font-weight: var(--montserrat-alternates-font-weight-600);
 		margin-bottom: 20px;
 
 		@media screen and (max-width: $pre-tablet) {
 			max-width: 280px;
 			letter-spacing: -0.03em;
 			font-size: 28px;
-			line-height: 34px;
+			line-height: 1.21;
 			text-align: center;
 		}
 		@media screen and (min-width: $tablet) and (max-width: $pre-desctop) {
 			max-width: 319px;
 			font-size: 30px;
-			line-height: 37px;
+			line-height: 1.23;
 			margin-bottom: 10px;
 		}
 		@media screen and (min-width: $desctop) {
 			max-width: 757px;
 			font-size: 60px;
-			line-height: 65px;
+			line-height: 1.08;
 		}
 	}
 	&__subtitle {
-		font-family: "Montserrat Alternates";
-		font-style: normal;
-		font-weight: 500;
+		font-family: var(--montserrat-alternates-family);
+		font-weight: var(--montserrat-alternates-font-weight-500);
 		font-size: 16px;
-		line-height: 20px;
-		color: #3c322d;
+		line-height: 1.25;
 		margin-bottom: 28px;
 
 		@media screen and (min-width: $desctop) {
 			font-size: 24px;
-			line-height: 29px;
+			line-height: 1.2;
 		}
 	}
 }
@@ -105,27 +102,27 @@
 .hero__register-link {
 	display: inline-block;
 	padding: 9px 35px;
-	background-color: #f3848c;
+	background-color: var(--acent-color);
 	border-radius: 25px;
-	border: 1px solid #f3848c;
+	border: 1px solid var(--acent-color);
 	filter: drop-shadow(10px 15px 25px rgba(232, 183, 183, 0.45));
 
-	font-family: "Montserrat";
 	font-size: 18px;
-	line-height: 22px;
+	line-height: 1.22;
 	text-align: center;
-	color: #ffffff;
+	color: var(--text-white-color);
 	text-decoration: none;
 	margin-bottom: 32px;
+	transition: background-color var(--general-transition-effect), color var(--general-transition-effect);
 
 	&:focus,
 	&:hover {
-		background-color: #ffffff;
-		color: #f3848c;
+		background-color: var(--text-white-color);
+		color: var(--acent-color);
 	}
 	&:active {
-		color: #ffffff;
-		background-color: #f3848c;
+		color: var(--text-white-color);
+		background-color: var(--acent-color);
 		box-shadow: inset 0px 4px 4px rgba(107, 66, 66, 0.25);
 	}
 }

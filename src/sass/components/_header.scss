@@ -1,7 +1,7 @@
 .header {
 	&__container {
 		margin-bottom: 20px;
-		// align-items: center;
+
 		@media screen and (min-width: $tablet) {
 			margin-bottom: 28px;
 		}
@@ -12,19 +12,15 @@
 	&__flex-container {
 		display: flex;
 		align-items: center;
+		position: relative;
 	}
 	&__atributes {
 		z-index: 100;
-		position: relative;
 
-		@media screen and (max-width: $pre-desctop) {
-			width: 100%;
-		}
 		@media screen and (min-width: $desctop) {
 			margin-right: 55px;
 		}
 	}
-
 	&__menu-icon {
 		fill: currentColor;
 	}
@@ -46,7 +42,6 @@
 		top: 50%;
 		transform: translateY(-50%);
 	}
-
 	@media screen and (min-width: $desctop) {
 		display: none;
 	}
@@ -78,30 +73,20 @@
 		left: 0;
 		width: 100vw;
 		height: 100vh;
-		overflow-y: auto;
-		overflow-x: hidden;
 		opacity: 1;
-		background-color: #e5e2e3;
-		transform: translateX(0%);
-		transition: transform var(--general-transition-effect), opacity var(--general-transition-effect);
+		background-color: var(--side-menu-background);
+		transition: opacity var(--general-transition-effect);
 
 		@media screen and (max-width: $pre-tablet) {
 			padding-top: 112px;
 		}
-		@media screen and (min-width: $pre-tablet) and (max-width: $pre-desctop) {
+		@media screen and (min-width: $tablet) and (max-width: $pre-desctop) {
 			padding-top: 140px;
 		}
 
 		&.is-hide {
 			opacity: 0;
-			transform: translateX(100%);
 			pointer-events: none;
 		}
-	}
-}
-
-@media screen and (min-width: $desctop) {
-	.header__menu {
-		display: flex;
 	}
 }

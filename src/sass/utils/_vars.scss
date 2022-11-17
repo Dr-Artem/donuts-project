@@ -3,6 +3,8 @@
 	--title-color: #2E2520;
 	--acent-color: #F3848C;
 	--accent-white-color: #F6F7F7;
+	--text-white-color: #FFFFFF;
+	--side-menu-background: #E5E2E3;
 
 	// fonts
 	--montserrat-family: "Montserrat", sans-serif;
@@ -13,6 +15,9 @@
 	--montserrat-alternates-family: "Montserrat Alternates", sans-serif;
 	--montserrat-alternates-font-weight-500: 500;
 	--montserrat-alternates-font-weight-600: 600;
+
+	// effect
+	--general-transition-effect: .4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 $pre-mobile: 479.98px;

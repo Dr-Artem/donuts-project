@@ -9,7 +9,8 @@
 }
 .social__link {
 	display: flex;
-	color: #3c322d;
+	color: var(--main-color);
+	transition: color var(--general-transition-effect);
 
 	&:focus,
 	&:hover {

@@ -2,16 +2,21 @@
 	--main-color: #3C322D;
 	--acent-color: #F3848C;
 	--accent-white-color: #F6F7F7;
+	--text-white-color: #FFFFFF;
+	--side-menu-background: #E5E2E3;
 
 	// fonts
-	--montserrat-family: "Montserrat";
+	--montserrat-family: "Montserrat", sans-serif;
 	--montserrat-font-weight-400: 400;
 	--montserrat-font-weight-500: 500;
 	--montserrat-font-weight-600: 600;
 
-	--montserrat-alternates-family: "Montserrat Alternates"
+	--montserrat-alternates-family: "Montserrat Alternates", sans-serif;
 	--montserrat-alternates-font-weight-500: 500;
 	--montserrat-alternates-font-weight-600: 600;
+
+	// effect
+	--general-transition-effect: .4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 $pre-mobile: 479.98px;

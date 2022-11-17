@@ -1,51 +1,72 @@
 .header {
-	padding-top: 16px;
 	&__container {
+		margin-bottom: 20px;
+		// align-items: center;
+		@media screen and (min-width: $tablet) {
+			margin-bottom: 28px;
+		}
+		@media screen and (min-width: $desctop) {
+			margin-bottom: 65px;
+		}
+	}
+	&__flex-container {
+		display: flex;
 		align-items: center;
 	}
-	
-	&__atributes{
+	&__atributes {
 		z-index: 100;
 		position: relative;
 
 		@media screen and (max-width: $pre-desctop) {
 			width: 100%;
 		}
-	}
-	&__burger-menu {
-		position: absolute;
-		display: flex;
-		cursor: pointer;
-		background-color: transparent;
-		top: 0;
-		right: 0;
-
 		@media screen and (min-width: $desctop) {
-			display: none;
+			margin-right: 55px;
 		}
 	}
-	&__close-menu {
-		position: absolute;
-		display: flex;
-		cursor: pointer;
-		background-color: transparent;
-		top: 0;
-		right: 0;		
 
-		@media screen and (min-width: $desctop) {
-			display: none;
-		}
-	}
 	&__menu-icon {
 		fill: currentColor;
 	}
 	&__navigation {
-		@media screen and (max-width: $pre-tablet) {
-			padding-top: 112px;
-		}
-		@media screen and (min-width: $pre-tablet) and (max-width: $pre-desctop) {
-			padding-top: 140px;
-		}
+		height: 100%;
+		overflow-y: auto;
+	}
+}
+.header__button-menu {
+	position: absolute;
+	display: flex;
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+	top: 0;
+	right: 0;
+
+	@media screen and (min-width: $tablet) {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	@media screen and (min-width: $desctop) {
+		display: none;
+	}
+}
+.open-button {
+	visibility: hidden;
+	opacity: 0;
+
+	&.open {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+.close-button {
+	visibility: visible;
+	opacity: 1;
+
+	&.close {
+		visibility: hidden;
+		opacity: 0;
 	}
 }
 
@@ -60,8 +81,16 @@
 		overflow-y: auto;
 		overflow-x: hidden;
 		opacity: 1;
+		background-color: #e5e2e3;
 		transform: translateX(0%);
 		transition: transform var(--general-transition-effect), opacity var(--general-transition-effect);
+
+		@media screen and (max-width: $pre-tablet) {
+			padding-top: 112px;
+		}
+		@media screen and (min-width: $pre-tablet) and (max-width: $pre-desctop) {
+			padding-top: 140px;
+		}
 
 		&.is-hide {
 			opacity: 0;
@@ -70,9 +99,9 @@
 		}
 	}
 }
+
 @media screen and (min-width: $desctop) {
 	.header__menu {
 		display: flex;
-		width: 100%;
 	}
 }

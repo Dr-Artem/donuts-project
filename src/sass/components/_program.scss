@@ -120,13 +120,6 @@
 }
 
 
-.program__img-desc {
-    position: absolute;
-    bottom: 20%;
-    left: 10%;
-}
-
-
 .program__header {
     margin-bottom: 8px;
 
@@ -137,7 +130,8 @@
     text-align: center;
 
     @media screen and (min-width: $tablet) {
-     margin-bottom: 28px;   
+        font-size: 32px;
+        margin-bottom: 28px;   
     }
 
     @media screen and (min-width: $desctop) {
@@ -147,51 +141,97 @@
 
 .program__text {
     font-size: 16px;
-    line-height: 1.25;
+    line-height: 1.21;
     letter-spacing: 0em;
     margin-bottom: 8px;
-    margin-top: 8px;
 
     @media screen and (min-width: $tablet) {
-     margin-bottom: 12px;   
+        margin-bottom: 12px;   
     }
 
     @media screen and (min-width: $desctop) {
-     margin-bottom: 20px;   
+        font-size: 18px;
+        margin-bottom: 20px;   
+    }
+}
+
+.program__item {
+    display: inline-flex;
+    align-items: center;
+
+    &:not(:last-child) {
+        margin-bottom: 8px;
+
+        @media screen and (min-width: $tablet) {
+        margin-bottom: 12px;   
+        }
+
+        @media screen and (min-width: $desctop) {
+        margin-bottom: 16px;   
+        }
+    }
+
+    &::before {
+        content: '';
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        background-image: url(../images/program/icon.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @media screen and (min-width: $desctop) {
+        margin-right: 16px;
+        }
     }
 }
 
 
-.program__item:not(:last-child) {
-    margin-bottom: 8px;
-
-    @media screen and (min-width: $tablet) {
-     margin-bottom: 12px;   
-    }
+.program__item-text {
+    font-size: 16px;
+    line-height: 1.21;
+    letter-spacing: 0em;
 
     @media screen and (min-width: $desctop) {
-     margin-bottom: 16px;   
+        font-size: 18px;
     }
 }
 
-.program__item::before {
-    content: '';
-    /* background-image: './images/program/list-icon.svg'; */
-    width: 24px;
-    height: 24px;
-    padding-right: 8px;
+
+.program__img-desc {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 100%;
+
+    @media screen and (min-width: $desctop) {
+        bottom: 32px;
+    }
+
+
 }
+
 
 
 .program__img-title {
+    margin-bottom: 8px;
+    font-family: Montserrat Alternates;
     font-size: 14px;
     font-weight: 500;
     line-height: 1.21;
     letter-spacing: 0em;
     text-align: center;
-
-    
     color: #FFFFFF;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 16px;
+        }
+
+    @media screen and (min-width: $desctop) {
+        margin-bottom: 32px;
+        font-size: 24px;
+        }
 }
 
 
@@ -200,7 +240,18 @@
     line-height: 1.25;
     letter-spacing: 0em;
     text-align: center;
-
-    
     color: #FFFFFF;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 14px;
+        }
+
+    @media screen and (min-width: $desctop) {
+        font-size: 16px;
+        }
+}
+
+.program__mark-icon {
+    width: 24px;
+    height: 24px;
 }

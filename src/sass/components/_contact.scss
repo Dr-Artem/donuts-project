@@ -1,0 +1,63 @@
+.contact {
+	justify-content: center;
+	background-color: #f6f7f7;
+
+	&__form {
+		max-width: 280px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin: 0 auto;
+
+		@media screen and (min-width: $tablet) {
+			max-width: 336px;
+		}
+
+		@media screen and (min-width: $desctop) {
+			max-width: 394px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 27px;
+	}
+}
+
+.subtitle {
+	font-family: "Montserrat";
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+	margin-bottom: 16px;
+
+	@media screen and (min-width: $tablet) and (max-width: $tablet) {
+		font-size: 18px;
+		line-height: 1.222;
+		margin-bottom: 27px;
+	}
+}
+
+.input__field {
+	width: 100%;
+	font-size: 16px;
+	line-height: 20px;
+	color: rgba(0, 0, 0, 0.5);
+	border-color: transparent;
+	border-bottom: 1px solid #3c322d;
+	background-color: transparent;
+}
+
+.contact__label {
+	width: 100%;
+	&--email {
+		margin-bottom: 16px;
+	}
+
+	&--question {
+		margin-bottom: 28px;
+		@media screen and (min-width: $desctop) {
+			margin-bottom: 32px;
+		}
+	}
+}

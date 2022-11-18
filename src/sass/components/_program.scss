@@ -1,20 +1,15 @@
 
 
 .program {
-    /* padding: 28px 0 35px 0; */
     padding-bottom: 35px;
-    background-color: #E5E2E3;
 
     @media screen and (min-width: $tablet) {
         display: flex;
         justify-content: center;
-        /* padding: 80px 0 44px 0; */
         padding-bottom: 44px;
-        /* background: linear-gradient(180.11deg, #E5E2E3 10.73%, #FDFEFE 38.02%, #E5E2E3 71.11%, #FDFEFE 99.91%); */
     }
 
     @media screen and (min-width: $desctop) {
-        /* padding: 101px 0 100px 0; */
         padding-bottom: 100px;
     }
 
@@ -348,7 +343,7 @@
     font-weight: 500;
     line-height: 1.21;
     text-align: center;
-    color: #FFFFFF;
+    color: var(--text-white-color);
 
     @media screen and (min-width: $tablet) {
         font-size: 16px;
@@ -365,7 +360,7 @@
     font-size: 12px;
     line-height: 1.25;
     text-align: center;
-    color: #FFFFFF;
+    color: var(--text-white-color);
 
     @media screen and (min-width: $tablet) {
         font-size: 14px;

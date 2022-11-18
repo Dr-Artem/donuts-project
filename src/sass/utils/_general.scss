@@ -1,6 +1,7 @@
 body {
-	font-family: 'Montserrat', sans-serif;
+	font-family: var(--montserrat-family);
 	color: var(--main-color);
+	background: linear-gradient(180.11deg, #E5E2E3 10.73%, #FDFEFE 38.02%, #E5E2E3 71.11%, #FDFEFE 99.91%) no-repeat;
 	margin: 0;
 }
 

@@ -1,0 +1,241 @@
+.registration__title {
+	font-size: 32px;
+	line-height: 1.2;
+	text-align: center;
+	color: var(--title-color);
+	margin-bottom: 27px;
+}
+
+.picture {
+	display: none;
+
+	@media screen and (min-width: $tablet) {
+		position: absolute;
+		bottom: 20px;
+		left: 23px;
+		display: block;
+	}
+	@media screen and (min-width: $tablet) {
+		bottom: 16px;
+		left: 15px;
+	}
+}
+
+.registration__background {
+	position: relative;
+	margin: 0 auto;
+	padding: 40px 8px 32px;
+	background: linear-gradient(rgba(61, 44, 44, 0.6), rgba(61, 44, 44, 0.6)),
+		url("../images/reg-img480.jpg") no-repeat center/cover, linear-gradient(rgb(246, 247, 247), rgb(246, 247, 247));
+	box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
+	border-radius: 10px;
+
+	@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+		background: linear-gradient(rgba(61, 44, 44, 0.6), rgba(61, 44, 44, 0.6)),
+			url("../images/reg-img480@2x.jpg") no-repeat center/cover,
+			linear-gradient(rgb(246, 247, 247), rgb(246, 247, 247));
+	}
+
+	@media screen and (min-width: $tablet) {
+		display: flex;
+		max-width: 704px;
+		padding: 40px 40px 52px 62px;
+		align-items: center;
+		background-image: url("../images/white-fone-768.png"), url("../images/black-fone-768.png"),
+			url("../images/reg-img768.jpg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: 0 100%, 100% 0, 100% 0;
+
+		@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+			background-image: url("../images/white-fone-768@2x.png"), url("../images/black-fone-768@2x.png"),
+				url("../images/reg-img768@2x.jpg");
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
+
+	@media screen and (min-width: $desctop) {
+		display: flex;
+		max-width: 1034px;
+		padding: 40px 232px 40px 213px;
+		align-items: center;
+		background-image: url("../images/white-fone1200.png"), url("../images/black-fone-1200.png"),
+			url("../images/reg-img1200.jpg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: 0 100%, 100% 0, 100% 0;
+
+		@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+			background-image: url("../images/white-fone1200@2x.png"), url("../images/black-fone-1200@2x.png"),
+				url("../images/reg-img1200@2x.jpg");
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
+}
+
+.form__wrap {
+	@media screen and (max-width: $pre-tablet) {
+		margin-bottom: 32px;
+	}
+}
+
+.form__text--wrapper {
+	@media screen and (max-width: $pre-tablet) {
+		margin-bottom: 40px;
+	}
+	@media screen and (min-width: $tablet) {
+		margin-right: 56px;
+	}
+}
+
+.form__text--first {
+	font-weight: 500;
+	max-width: 114px;
+	font-size: 18px;
+	line-height: 1.2;
+	color: var(--accent-white-color);
+
+	@media screen and (max-width: $pre-tablet) {
+		text-align: center;
+		margin: 0 auto;
+	}
+	@media screen and (min-width: $tablet) {
+		display: inline-block;
+		width: 90px;
+		color: #000000;
+		text-align: end;
+	}
+	@media screen and (min-width: $desctop) {
+		// font-size: 20px;
+		// line-height: 24px;
+		width: 127px;
+		// text-align: end;
+	}
+}
+
+.form__text--second {
+	max-width: 200px;
+	font-size: 16px;
+	line-height: 1.25;
+	color: var(--accent-white-color);
+
+	@media screen and (max-width: $pre-tablet) {
+		margin: 0 auto 20px;
+		text-align: center;
+	}
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 20px;
+		color: #000000;
+	}
+	@media screen and (min-width: $desctop) {
+		max-width: 267px;
+		font-size: 20px;
+		line-height: 24px;
+	}
+}
+
+.registration__form {
+	position: relative;
+
+	&::before {
+		position: absolute;
+		content: "";
+		top: -20px;
+		display: block;
+		background-color: var(--accent-white-color);
+		width: 100%;
+		height: 1px;
+	}
+
+	@media screen and (min-width: $tablet) {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&::before {
+			width: 1px;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			left: -24px;
+			top: 20px;
+		}
+	}
+	@media screen and (min-width: $desctop) {
+		&::before {
+			left: -28px;
+			top: 0;
+		}
+	}
+}
+
+.registration__label {
+	display: block;
+	@media screen and (min-width: $tablet) {
+		max-width: 80%;
+	}
+}
+.registration__label:not(:last-child) {
+	margin-bottom: 20px;
+
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 16px;
+	}
+}
+
+.registration__input {
+	width: 100%;
+	color: var(--accent-white-color);
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid var(--accent-white-color);
+	font-size: 16px;
+	line-height: 1.25;
+	outline: none;
+
+	&::placeholder {
+		color: var(--accent-white-color);
+	}
+
+	@media screen and (min-width: $tablet) {
+		color: #000000;
+		border-bottom: 1px solid #000000;
+		padding: 0;
+
+		&::placeholder {
+			color: rgba(0, 0, 0, 0.5);
+		}
+	}
+}
+
+.button.registration {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+
+	color: var(--accent-white-color);
+	background-color: var(--acent-color);
+	border-radius: 25px;
+	border: none;
+	width: 145px;
+	padding: 8px 0;
+	margin: 0 auto;
+
+	&:hover {
+		color: var(--acent-color);
+		background: var(--hover-white-color);
+		border: 1px solid var(--acent-color);
+	}
+
+	&:active {
+		border: 1px solid var(--hover-white-color);
+	}
+
+	@media screen and (min-width: $tablet) {
+		height: 40px;
+		margin: 0;
+	}
+}

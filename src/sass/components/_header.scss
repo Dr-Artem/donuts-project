@@ -83,7 +83,7 @@
 		position: fixed;
 		top: 0px;
 		left: 0px;
-		transition: opacity var(--general-transition-effect);
+		transition: all var(--general-transition-effect);
 
 		&.is-hide {
 			opacity: 0;

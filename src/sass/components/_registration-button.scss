@@ -1,0 +1,36 @@
+.registration-button {
+    display: block;
+    width: 145px;
+    height: 40px;
+    text-align: center;
+    padding: 9px;
+    border: none;
+    box-shadow: none;
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: 18px;
+	text-decoration: none;
+    color: var(--accent-white-color);
+    background-color: var(--acent-color);
+    filter: drop-shadow(10px 15px 25px rgba(232, 183, 183, 0.45));
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),;
+ 
+    &:hover {
+        background-color: var(--accent-white-color);
+        color: var(--acent-color);
+        border: 1px solid var(--acent-color);
+    }
+
+    &:focus {
+        color: var(--accent-white-color);
+        background-color: var(--acent-color);
+        box-shadow: inset 0px 4px 4px rgba(107, 66, 66, 0.25);
+    }
+}
+
+.registration-button a {
+    color: var(--accent-white-color);
+}

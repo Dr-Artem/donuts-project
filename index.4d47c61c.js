@@ -1,0 +1,2 @@
+(()=>{const e={openMenuBtn:document.querySelector("[data-menu-open]"),closeMenuBtn:document.querySelector("[data-menu-close]"),menu:document.querySelector("[data-menu]"),cover:document.querySelector("[data-cover]")};function t(){e.openMenuBtn.classList.toggle("open"),e.closeMenuBtn.classList.toggle("close"),e.cover.classList.toggle("cover"),e.menu.classList.toggle("is-hide"),document.querySelector("body").classList.toggle("is-hidden")}e.openMenuBtn.addEventListener("click",t),e.closeMenuBtn.addEventListener("click",t)})();
+//# sourceMappingURL=index.4d47c61c.js.map

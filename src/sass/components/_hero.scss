@@ -1,5 +1,12 @@
 .hero {
 	margin-bottom: 20px;
+
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 36px;
+	}
+	@media screen and (min-width: $desctop) {
+		margin-bottom: 64px;
+	}
 	&__image-wrapper {
 		padding-top: 16px;
 		padding-bottom: 8px;
@@ -36,7 +43,6 @@
 		}
 
 		@media screen and (min-width: 1280px) {
-			max-width: 1600px;
 			padding-top: 36px;
 			padding-bottom: 90px;
 
@@ -98,38 +104,13 @@
 		}
 	}
 	&__register-link {
-		background-color: var(--acent-color);
-		filter: drop-shadow(rgba(232, 183, 183, 0.45) 10px 15px 25px);
-		text-align: center;
-		color: var(--text-white-color);
 		margin-bottom: 32px;
-		font-size: 18px;
-		line-height: 1.22;
-		display: inline-block;
-		border: 1px solid var(--acent-color);
-		border-radius: 25px;
-		padding: 9px 35px;
-		text-decoration: none;
-
-		&:focus,
-		&:hover {
-			background-color: var(--text-white-color);
-			color: var(--acent-color);
-		}
-		&:active {
-			color: var(--text-white-color);
-			background-color: var(--acent-color);
-			box-shadow: rgba(107, 66, 66, 0.25) 0px 4px 4px inset;
-		}
 	}
-}
-
-.hero {
 	&.cover {
 		z-index: 10;
 		overflow: hidden;
 		width: 100vw;
-		height: 100vh;		
+		height: 100vh;
 		background-color: var(--side-menu-background);
 		// transition: background-color var(--general-transition-effect);
 		top: 0px;

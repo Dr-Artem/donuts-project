@@ -42,7 +42,7 @@
 	@media screen and (min-width: $tablet) {
 		display: flex;
 		max-width: 704px;
-		padding: 40px 40px 52px 62px;
+		padding: 40px;
 		align-items: center;
 		background-image: url("../images/white-fone-768.png"), url("../images/black-fone-768.png"),
 			url("../images/reg-img768.jpg");
@@ -61,7 +61,7 @@
 	@media screen and (min-width: $desctop) {
 		display: flex;
 		max-width: 1034px;
-		padding: 40px 232px 40px 213px;
+		padding: 40px 0;
 		align-items: center;
 		background-image: url("../images/white-fone1200.png"), url("../images/black-fone-1200.png"),
 			url("../images/reg-img1200.jpg");
@@ -111,10 +111,9 @@
 		text-align: end;
 	}
 	@media screen and (min-width: $desctop) {
-		// font-size: 20px;
-		// line-height: 24px;
+		font-size: 20px;
+		line-height: 1.25;
 		width: 127px;
-		// text-align: end;
 	}
 }
 
@@ -133,7 +132,7 @@
 		color: #000000;
 	}
 	@media screen and (min-width: $desctop) {
-		max-width: 267px;
+		max-width: 250px;
 		font-size: 20px;
 		line-height: 24px;
 	}
@@ -152,6 +151,10 @@
 		height: 1px;
 	}
 
+	@media screen and (max-width: $pre-tablet) {
+		width: 100%;
+	}
+
 	@media screen and (min-width: $tablet) {
 		width: 100%;
 		display: flex;
@@ -163,20 +166,19 @@
 			height: 100%;
 			background-color: rgba(0, 0, 0, 0.5);
 			left: -24px;
-			top: 20px;
+			top: 0;
 		}
 	}
 	@media screen and (min-width: $desctop) {
 		&::before {
 			left: -28px;
-			top: 0;
 		}
 	}
 }
 
 .registration__label {
 	display: block;
-	@media screen and (min-width: $tablet) {
+	@media screen and (min-width: $desctop) {
 		max-width: 80%;
 	}
 }
@@ -209,36 +211,34 @@
 
 		&::placeholder {
 			color: rgba(0, 0, 0, 0.5);
-		}
+		}	
 	}
 }
+.registration__input:not(:placeholder-shown):focus {
+	border-bottom-color: orange;
+}
+.registration__input:not(:placeholder-shown):invalid:not(:focus) {
+	border-bottom-color: red;
+	animation: shake 0.65s;
+}
+.registration__input:not(:placeholder-shown):valid:not(:focus) {
+	border-bottom-color: green;
+}
+.registration__form:invalid button {
+	pointer-events: none;
+	border-color: #ffd1d4bd;
+	background-color: #ffd1d4bd;
+}
 
-.button.registration {
+.form__content {
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	cursor: pointer;
-
-	color: var(--accent-white-color);
-	background-color: var(--acent-color);
-	border-radius: 25px;
-	border: none;
-	width: 145px;
-	padding: 8px 0;
 	margin: 0 auto;
-
-	&:hover {
-		color: var(--acent-color);
-		background: var(--hover-white-color);
-		border: 1px solid var(--acent-color);
+	@media screen and (max-width: $pre-tablet) {
+		flex-direction: column;
 	}
-
-	&:active {
-		border: 1px solid var(--hover-white-color);
-	}
-
-	@media screen and (min-width: $tablet) {
-		height: 40px;
+	@media screen and (min-width: $tablet) and (max-width: $pre-desctop) {
+		width: 100%;
 		margin: 0;
 	}
 }

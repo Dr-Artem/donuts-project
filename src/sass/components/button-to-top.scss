@@ -1,0 +1,23 @@
+#toTop {
+	transition: background-color var(--general-transition-effect);
+	@media screen and (min-width: $desctop) {
+		height: 50px;
+		width: 50px;
+		display: none;
+		position: fixed;
+		bottom: 40px;
+		right: 40px;
+		z-index: 99;
+		font-size: 18px;
+		border: none;
+		outline: none;
+		background-color: var(--acent-color);
+		color: var(--text-white-color);
+		cursor: pointer;
+		border-radius: 50%;
+	}
+}
+
+#toTop:hover {
+	background-color: var(--main-color);
+}

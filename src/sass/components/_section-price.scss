@@ -2,13 +2,13 @@
 	font-family: var(--montserrat-alternates-family);
 	font-weight: var(--montserrat-alternates-font-weight-600);
 	font-size: 24px;
-	line-height: 29px;
+	line-height: 1.21;
 	text-align: center;
 
 	@media screen and (min-width: $tablet) {
 		font-weight: var(--montserrat-alternates-font-weight-500);
 		font-size: 32px;
-		line-height: 39px;
+		line-height: 1.22;
 	}
 	@media screen and (min-width: $desctop) {
 		margin-bottom: 100px;
@@ -23,140 +23,117 @@
 	@media screen and (min-width: $desctop) {
 		margin-bottom: 100px;
 	}
-}
 
-.price__title {
-	margin-bottom: 27px;
-	@media screen and (min-width: $tablet) and (max-width: $pre-desctop) {
-		margin-bottom: 31px;
+	&__title {
+		margin-bottom: 27px;
+		@media screen and (min-width: $tablet) and (max-width: $pre-desctop) {
+			margin-bottom: 31px;
+		}
 	}
-}
-
-.price__list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		@media screen and (min-width: $tablet) {
+			gap: 15px;
+		}
+	}
 }
 
 .price-card {
 	position: relative;
 	display: flex;
-
 	flex-direction: column;
 	align-items: center;
-	padding: 20px 18px 20px 8px;
+
+	padding: 20px 13px;
 	background: #fafbfb;
 	box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
 	border-radius: 25px;
 	border: 1px solid transparent;
-	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: border-color var(--general-transition-effect);
 
-	@media screen and (min-width: $mobile) {
-		max-width: 280px;
+	@media screen and (max-width: $pre-tablet) {
+		flex-basis: 100%;
+
+		&:not(:last-child) {
+			margin-bottom: 32px;
+		}
 	}
 	@media screen and (min-width: $tablet) {
-		max-width: 225px;
-		// height: 580px;
-		padding-right: 8px;
+		flex-basis: calc((100% - 15px * 2) / 3);
 	}
 	@media screen and (min-width: $desctop) {
-		position: relative;
-		max-width: 375px;
-		// height: 610px;
-		padding: 28px 5px 40px 10px;
+		flex-basis: calc((100% - 32px * 2) / 3);
+		padding: 30px 8px 40px;
 	}
-}
-.price-card:hover {
-	border: 1px solid var(--acent-color);
-}
 
-@media screen and (max-width: $pre-tablet) {
-	.price-card:not(:last-child) {
-		margin-bottom: 32px;
+	&:hover {
+		border-color: var(--acent-color);
+	}
+	&:hover .price-card__picture {
+		opacity: 0;
 	}
 }
 
 .price-card__type {
 	text-align: center;
-	max-width: 212px;
+	max-width: 80%;
 	margin-bottom: 20px;
 	font-family: var(--montserrat-alternates-family);
 	font-weight: var(--montserrat-alternates-font-weight-600);
 	font-size: 18px;
-	line-height: 22px;
+	line-height: 1.22;
+
+	@media screen and (min-width: $tablet) {
+		font-size: 18px;
+		line-height: 1.22;
+	}
+	@media screen and (min-width: $desctop) {
+		margin-bottom: 40px;
+		font-size: 20px;
+		line-height: 1.2;
+	}
 }
 
 .price-card__item {
 	display: flex;
 	align-items: center;
-	margin-bottom: 12px;
 	font-size: 18px;
-	line-height: 22px;
-}
+	line-height: 1.22;
 
-.price-card__item::before {
-	content: "";
-	background-image: url("../images/icon-list.svg");
-	background-position: center;
-	background-repeat: no-repeat;
-	padding: 12px;
-	margin-right: 10px;
-}
+	&:not(:last-child) {
+		margin-bottom: 12px;
+	}
 
-.price-card__item:last-child {
-	margin-bottom: 30px;
+	@media screen and (min-width: $tablet) and (max-width: $pre-desctop) {
+		font-size: 16px;
+		line-height: 1.25;
+	}
+	&::before {
+		content: "";
+		background-image: url("../images/icon-list.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+		padding: 12px;
+		margin-right: 10px;
+	}
 }
 
 .price-card__picture {
 	position: absolute;
 	bottom: 95px;
-}
-
-@media screen and (max-width: $pre-tablet) {
-	.price-card__picture--first {
-		display: none;
-	}
-}
-@media screen and (min-width: $tablet) {
-	.price__list {
-		flex-wrap: nowrap;
-		justify-content: space-between;
-	}
-
-	.price-card__type {
-		font-size: 18px;
-		line-height: 22px;
-	}
-	.price-card__item {
-		font-size: 16px;
-		line-height: 20px;
-	}
-	.price-card a {
-		margin-bottom: 0;
-	}
-}
-@media screen and (min-width: $desctop) {
-	.price__list {
-		flex-wrap: nowrap;
-		justify-content: space-between;
-	}
-
-	.price-card__type {
-		width: 250px;
-		margin-bottom: 40px;
-		font-size: 20px;
-		line-height: 24px;
-	}
-	.price-card__item {
-		margin-bottom: 16px;
-		font-size: 18px;
-		line-height: 22px;
-	}
-	.price-card a {
-		margin-bottom: 0;
-	}
+	transition: opacity var(--general-transition-effect);
 }
 
 .price-card__list {
 	flex: 1 0 auto;
+	margin-bottom: 30px;
+
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 35px;
+	}
+	@media screen and (min-width: $desctop) {
+		margin-bottom: 40px;
+	}
 }

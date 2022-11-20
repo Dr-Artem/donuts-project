@@ -81,6 +81,7 @@
 .form__wrap {
 	@media screen and (max-width: $pre-tablet) {
 		margin-bottom: 32px;
+		width: 100%;
 	}
 }
 
@@ -152,6 +153,9 @@
 	}
 
 	@media screen and (max-width: $pre-tablet) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		width: 100%;
 	}
 

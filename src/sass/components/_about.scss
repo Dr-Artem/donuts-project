@@ -1,100 +1,102 @@
 .about {
-	margin-bottom: 20px;
-}
-.about__wrapper {
-	display: flex;
-
-	@media screen and (max-width: $pre-tablet) {
-		flex-direction: column;
-		align-items: center;
-	}
-}
-
-.about__img-wrapper {
 	margin-bottom: 28px;
-	@media screen and (min-width: $tablet) {
-		margin-right: 32px;
-	}
-}
-
-.about__image {
-	border-radius: 24px;
-	@media screen and (min-width: $desctop) {
-		width: 608px;
-	}
-}
-
-.about__title {
-	font-family: "Montserrat Alternates";
-	font-weight: 500;
-	font-size: 24px;
-	line-height: 1.2;
-	margin: 0 auto;
-	color: var(--main-color);
-	margin-bottom: 8px;
-
-	@media screen and (max-width: $pre-tablet) {
-		text-align: center;
-	}
 
 	@media screen and (min-width: $tablet) {
-		font-size: 32px;
-		margin-bottom: 28px;
-	}
-}
-
-.about__text {
-	font-size: 16px;
-	line-height: 1.25;
-	max-width: 100%;
-	color: var(--main-color);
-	margin-bottom: 16px;
-
+		margin-bottom: 80px;
+	}	
 	@media screen and (min-width: $tablet) {
-		max-width: 336px;
-		font-size: 18px;
-		line-height: 1.2;	
-	}
-	@media screen and (min-width: $desctop) {
-		max-width: 608px;
-		font-size: 18px;
-		line-height: 1.22;
-	}
-}
-.about__text-first {
-	@media screen and (min-width: $tablet) {
-		margin-bottom: 18px;
-	}
-}
-.about__text-second {
-	@media screen and (min-width: $tablet) {
-		margin-bottom: 28px;
-	}
-}
-
-.about__text-more {
-	display: none;
-
-	@media screen and (min-width: $desctop) {
-		display: block;
-	}
-}
-
-.about__button {
-	border: none;
-	background-color: transparent;
-	color: var(--main-color);
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 1.25;
-	text-align: center;
-
-	&:hover,
-	&:focus {
-		color: var(--acent-color);
+		margin-bottom: 100px;
 	}
 
-	@media screen and (min-width: $desctop) {
+	&__wrapper {
+		display: flex;
+
+		@media screen and (max-width: $pre-tablet) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__img-wrapper {
+		@media screen and (max-width: $pre-tablet) {
+			margin-bottom: 28px;
+			width: 100%;
+		}
+		@media screen and (min-width: $tablet) {
+			flex: 1;
+			margin-right: 31px;
+		}
+	}
+	&__image {
+		border-radius: 40px;
+		@media screen and (max-width: $pre-tablet) {
+			width: 100%;
+		}
+	}
+	&__content-wrapper {
+		flex: 1;
+	}
+	&__title {
+		font-family: var(--montserrat-alternates-family);
+		font-weight: var(--montserrat-alternates-font-weight-500);
+		font-size: 24px;
+		line-height: 1.2;
+		margin: 0 auto;
+		color: var(--main-color);
+		margin-bottom: 8px;
+
+		@media screen and (max-width: $pre-tablet) {
+			text-align: center;
+		}
+		@media screen and (min-width: $tablet) {
+			font-size: 32px;
+			margin-bottom: 28px;
+		}
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 1.25;
+		color: var(--main-color);
+		margin-bottom: 20px;
+
+		@media screen and (min-width: $desctop) {
+			font-size: 18px;
+			line-height: 1.22;
+			margin-bottom: 22px;
+		}
+	}
+	&__text-second {
+		@media screen and (max-width: $pre-tablet) {
+			margin-bottom: 18px;
+		}
+		@media screen and (min-width: $tablet) and (max-width: $pre-desctop) {
+			margin-bottom: 28px;
+		}
+	}
+	&__text-more {
 		display: none;
+
+		@media screen and (min-width: $desctop) {
+			margin-bottom: 0;
+			display: block;
+		}
+	}
+	&__button {
+		border: none;
+		background-color: transparent;
+		color: var(--main-color);
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1.25;
+		text-align: center;
+		transition: color var(--general-transition-effect);
+
+		@media screen and (min-width: $desctop) {
+			display: none;
+		}
+
+		&:hover,
+		&:focus {
+			color: var(--acent-color);
+		}
 	}
 }

@@ -1,104 +1,106 @@
 .header {
-	&__container {
-		margin-bottom: 20px;
+    &__container {
+        margin-bottom: 20px;
 
-		@media screen and (min-width: $tablet) {
-			margin-bottom: 28px;
-		}
-		@media screen and (min-width: $desctop) {
-			margin-bottom: 65px;
-		}
-	}
-	&__flex-container {
-		align-items: center;
-		display: flex;
-		position: relative;
-	}
-	&__atributes {
-		z-index: 100;
-		@media screen and (min-width: $desctop) {
-			margin-right: 55px;
-		}
-	}
-	&__button-menu {
-		position: absolute;
-		display: flex;
-		cursor: pointer;
-		border: 0;
-		background-color: transparent;
-		top: 0;
-		right: 0;
-		transition: color var(--general-transition-effect);
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 28px;
+        }
+        @media screen and (min-width: $desctop) {
+            margin-bottom: 65px;
+        }
+    }
+    &__flex-container {
+        align-items: center;
+        display: flex;
+        position: relative;
+    }
+    &__atributes {
+        z-index: 100;
+        @media screen and (min-width: $desctop) {
+            margin-right: 55px;
+        }
+    }
+    &__button-menu {
+        position: absolute;
+        display: flex;
+        cursor: pointer;
+        border: 0;
+        background-color: transparent;
+        top: 0;
+        right: 0;
+        transition: color var(--general-transition-effect);
 
-		&:hover,
-		&:focus {
-			color: var(--acent-color);
-		}
+        &:hover,
+        &:focus {
+            color: var(--acent-color);
+        }
 
-		@media screen and (min-width: 768px) {
-			top: 50%;
-			transform: translateY(-50%);
-		}
-		@media screen and (min-width: $desctop) {
-			display: none;
-		}
-	}
-	&__menu-icon {
-		fill: currentColor;
-	}
-	&__menu {
-		@media screen and(max-width: $pre-tablet) {
-			padding-top: 112px;
-		}
-		@media screen and (min-width: $tablet) and (max-width: $desctop) {
-			padding-top: 140px;
-		}
-	}
-	&__navigation {
-		height: 100%;
-		overflow-y: auto;
-	}
+        @media screen and (min-width: 768px) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        @media screen and (min-width: $desctop) {
+            display: none;
+        }
+    }
+    &__menu-icon {
+        fill: currentColor;
+    }
+    &__menu {
+        @media screen and(max-width: $pre-tablet) {
+            padding-top: 112px;
+        }
+        @media screen and (min-width: $tablet) and (max-width: $desctop) {
+            padding-top: 140px;
+        }
+    }
+    &__navigation {
+        height: 100%;
+        overflow-y: auto;
+    }
 }
 
 .open-button {
-	visibility: hidden;
-	opacity: 0;
-
-	&.open {
-		visibility: visible;
-		opacity: 1;
-	}
+    &[data-menu-open='false'] {
+        visibility: visible;
+        opacity: 1;
+    }
+    &[data-menu-open='true'] {
+        visibility: hidden;
+        opacity: 0;
+    }
 }
 .close-button {
-	visibility: visible;
-	opacity: 1;
-
-	&.close {
-		visibility: hidden;
-		opacity: 0;
-	}
+    &[data-menu-close='true'] {
+        visibility: hidden;
+        opacity: 0;
+    }
+    &[data-menu-close='false'] {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: $pre-desctop) {
-	.header__menu {
-		z-index: 10;
-		width: 100vw;
-		height: 100vh;
-		opacity: 1;
-		background-color: var(--side-menu-background);
-		position: fixed;
-		top: 0px;
-		left: 0px;
-		transition: all var(--general-transition-effect);
+    .header__menu {
+        z-index: 10;
+        width: 100vw;
+        height: 100vh;
+        opacity: 1;
+        background-color: var(--side-menu-background);
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        transition: all var(--general-transition-effect);
 
-		&.is-hide {
-			opacity: 0;
-			pointer-events: none;
-		}
-	}
+        &.is-hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
 }
 @media screen and (min-width: $desctop) {
-	.header__menu {
-		display: flex;
-	}
+    .header__menu {
+        display: flex;
+    }
 }

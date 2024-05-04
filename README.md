@@ -13,8 +13,8 @@ register for participation.
 ## Features
 
 -   **Event Information:** The landing page provides detailed information about
-    the date, time, and location of the masterclass event, as well as a
-    description of the program and other important details.
+    the masterclass event, as well as a description of the program and other
+    important details.
 -   **Registration:** Participants can register for the masterclass by filling
     out a registration form with basic contact details.
 -   **Visual Appeal:** The landing page has an attractive design and appealing
